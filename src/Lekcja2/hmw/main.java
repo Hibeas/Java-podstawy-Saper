@@ -20,11 +20,11 @@ public class main {
             letterA++;
         }
         //zad2 Napisz pętle która wypisze ciąg fibonacciego o długości X(gdzie x jest zdefiniowaną zmienną)
-        int x=7;
+        int x=11;
         int inta=0;
         int intb=1;
-        for (int i=0; i <7; i++){
-            System.out.println('1' + intb + " ");
+        for (int i=0; i <x; i++){
+            System.out.print(intb + " ");
             intb += inta;
             inta = intb-inta;
         }
