@@ -1,4 +1,6 @@
-public class HelloWorld {
+package Lekcja1;
+
+public class main {
     //tutaj stworzymy sobie metode main (czyli metodę głowną)
     public static void main(String[] args) {
         //Zad 1 Wypisz text, który zwiera wszytkie dzisiajn poznane zmienne (bez boolean).
