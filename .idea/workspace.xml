@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c97c1205-e3d8-4bb6-bf91-3441ff111d9c" name="Default Changelist" comment="" />
+    <list default="true" id="c97c1205-e3d8-4bb6-bf91-3441ff111d9c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Lekcja3/hmw/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lekcja3/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,13 +34,13 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.main (2)">
-    <configuration name="main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lekcja2.main" />
+  <component name="RunManager" selected="Application.main (4)">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lekcja3.hmw.Main" />
       <module name="Praktyki" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Lekcja2.*" />
+          <option name="PATTERN" value="Lekcja3.hmw.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -50,6 +54,32 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Lekcja2.hmw.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lekcja3.main" />
+      <module name="Praktyki" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lekcja3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lekcja3.hmw.main" />
+      <module name="Praktyki" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lekcja3.hmw.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -72,9 +102,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.main (2)" />
-        <item itemvalue="Application.main (1)" />
+        <item itemvalue="Application.main (4)" />
         <item itemvalue="Application.main" />
+        <item itemvalue="Application.main (3)" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.main (2)" />
       </list>
     </recent_temporary>
   </component>
