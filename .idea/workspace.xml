@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c97c1205-e3d8-4bb6-bf91-3441ff111d9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Lekcja3/hmw/main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lekcja3/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lekcja4/hmw/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lekcja4/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +21,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1otf10aUSmhNgvLqZfZaKOMPBSu" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -34,13 +42,13 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.main (4)">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lekcja3.hmw.Main" />
+  <component name="RunManager" selected="Application.main (2)">
+    <configuration name="main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lekcja4.main" />
       <module name="Praktyki" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Lekcja3.hmw.*" />
+          <option name="PATTERN" value="Lekcja4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -49,11 +57,11 @@
       </method>
     </configuration>
     <configuration name="main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lekcja2.hmw.main" />
+      <option name="MAIN_CLASS_NAME" value="Lekcja4.hmw.main" />
       <module name="Praktyki" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Lekcja2.hmw.*" />
+          <option name="PATTERN" value="Lekcja4.hmw.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,11 +110,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.main (2)" />
+        <item itemvalue="Application.main (1)" />
         <item itemvalue="Application.main (4)" />
         <item itemvalue="Application.main" />
         <item itemvalue="Application.main (3)" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.main (2)" />
       </list>
     </recent_temporary>
   </component>
