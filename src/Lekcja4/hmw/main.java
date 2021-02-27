@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
         //Przykład 4
-        System.out.println("Przykład 4");
+        System.out.println("Przykład 4 \n"+"1 metoda");
         int[] numbers = {12, 655,33,45,55,78,98,-45,12,444,655,-11,73,67,2,5,-45,55,655};
         //1 sposób bez porządkowania - wypisuje się wiele razy dana liczba (tyle ile razy występuje)
         for(int j=0; j<numbers.length;j++) {
@@ -34,7 +34,7 @@ public class main {
         }while(z==1);
         for(int j=0; j<numbers.length;j++) {
             int x = 0;
-            for (int i = 0; i < numbers.length; i++) {
+            for (int i = j; i < numbers.length; i++) {
                 if (numbers[j] == numbers[i] && i != j) {
                     if (numbers[i] != x) {
                         x = numbers[j];
@@ -43,6 +43,24 @@ public class main {
                 }
             }
         }
+    //3 metoda - bo w 2 z powodu tego że 655 występuje 3 razy, to wypisuje się dwa razy, tutaj stworzymy nową tablicę i będziemy do niej [przypisywać wartości które się nie powtarzają
+        int[] unumb={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+        System.out.println("3 metoda \n");
+        for(int j=0; j<numbers.length;j++) {
+            int x = 0;
+            for (int i = j; i < numbers.length; i++) {
+                if (numbers[j] == numbers[i] && i != j) {
+
+                        if(unumb[i-1]!=numbers[i]) {
+                            unumb[i] = numbers[i];
+                            if(unumb[i]!=0){
+                                System.out.println("Powtarza się : " + unumb[i]);
+                            }
+                        }
+                    }
+                }
+            }
+
 
 
         //Przykład 5 Zamień liczbe najwyższą z liczbą najmniejszą tablicy
@@ -95,10 +113,17 @@ public class main {
         Random random = new Random();
         int wylosowanaliczba;
         for(int i=0; i<2;i++){
-            wylosowanaliczba= random.nextInt(power.length);//0-2
+            wylosowanaliczba= random.nextInt(power.length);
             double pierwsza=power[wylosowanaliczba];
             System.out.println("Wylosowano  ["+i+"] : "+pierwsza);
+            if(i==1){
+                double p=pierwsza;
+            }
+            if(i==2){
+                p=
+            }
         }
+
         //Przykład 8 skaner
         Scanner scanner = new Scanner(System.in);
         String[] person = new String[4];
