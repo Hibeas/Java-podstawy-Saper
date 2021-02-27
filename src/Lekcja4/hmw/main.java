@@ -5,6 +5,46 @@ import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
+        //Przykład 4
+        System.out.println("Przykład 4");
+        int[] numbers = {12, 655,33,45,55,78,98,-45,12,444,655,-11,73,67,2,5,-45,55,655};
+        //1 sposób bez porządkowania - wypisuje się wiele razy dana liczba (tyle ile razy występuje)
+        for(int j=0; j<numbers.length;j++) {
+            for (int i = 0; i < numbers.length; i++) {
+                if (numbers[j] == numbers[i] && i != j) {
+                    System.out.println("Powtarza się : " + numbers[j]);
+
+                }
+            }
+        }
+        //2 metoda -  tylko raz się wypisuje dane liczba (z porządkowaniem tablicy)
+        System.out.println("2 metoda \n");
+        int z;
+        do {
+            z = 0;
+
+            for (int q = 1; q < numbers.length; q++) {
+                if (numbers[q - 1] > numbers[q]) {
+                    int ko = numbers[q - 1];
+                    numbers[q - 1] = numbers[q];
+                    numbers[q] = ko;
+                    z=1;
+                }
+            }
+        }while(z==1);
+        for(int j=0; j<numbers.length;j++) {
+            int x = 0;
+            for (int i = 0; i < numbers.length; i++) {
+                if (numbers[j] == numbers[i] && i != j) {
+                    if (numbers[i] != x) {
+                        x = numbers[j];
+                        System.out.println("Powtarza się : " + numbers[j]);
+                    }
+                }
+            }
+        }
+
+
         //Przykład 5 Zamień liczbe najwyższą z liczbą najmniejszą tablicy
         System.out.println("Przykład 5 \n");
         double[] power = {23.45, -2.22, 45.90, 67.45, -56, 234.11, -34.8, 90.4, -77};
@@ -35,11 +75,12 @@ public class main {
         }
         //Przykład 6 odwrócenie tablicy z przykładu 5
         double[] power6=power;
-        int x = power6.length-1;
-        for(int i=0; i < x; i++){
+        int x = power.length-1;
+        int h = power.length / 2;
+        for(int i=0; i < h; i++){
             double y=power6[i];
             power6[i] = power6[x];
-            power6[x] = power6[ i];
+            power6[x] = y;
             x--;
 
         }
