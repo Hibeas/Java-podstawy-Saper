@@ -112,16 +112,21 @@ public class main {
         System.out.println("Przykład 7 \n");
         Random random = new Random();
         int wylosowanaliczba;
-        for(int i=0; i<2;i++){
+        //postanowiłem zrobić bez for
             wylosowanaliczba= random.nextInt(power.length);
             double pierwsza=power[wylosowanaliczba];
-            System.out.println("Wylosowano  ["+i+"] : "+pierwsza);
-            if(i==1){
-                double p=pierwsza;
-            }
-            if(i==2){
-                p=
-            }
+            System.out.println("Wylosowano : "+pierwsza);
+            wylosowanaliczba= random.nextInt(power.length);
+            double druga=power[wylosowanaliczba];
+        System.out.println("Wylosowano : "+druga);
+        if(druga==pierwsza){
+            System.out.println(pierwsza+" Jest równa "+druga);
+        }
+        if(druga>pierwsza){
+            System.out.println(druga+" Jest większa od "+pierwsza + "\n Czyli :"+pierwsza+" Jest mniejsza od "+druga);
+        }
+        if(druga<pierwsza){
+            System.out.println(druga+" Jest mniejsza od "+pierwsza+"\nCzyli :"+"\n"+pierwsza+" Jest większa od "+druga);
         }
 
         //Przykład 8 skaner
