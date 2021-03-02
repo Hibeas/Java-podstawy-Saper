@@ -14,6 +14,8 @@ public class main {
         System.out.println(prostokat.PoleProstokat());
         prostokat.Przekatne();
         System.out.println(prostokat.Przekatne());
+        prostokat.setBokA(3);
+        System.out.println(prostokat.getBokA());
         //zad 3
         System.out.println("Zad 3");
         if(trojkat.getBokA()> prostokat.getBokA()){
