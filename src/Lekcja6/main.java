@@ -22,8 +22,8 @@ public class main {
         spawacz.wykonujePrace();
         //zad 4
         System.out.println("Zad 4");
-        System.out.println(" Która metoda przysłania metodę z klasy nadrzędnej/superclass?\n methodOne, methodTwo, methodFour");
-        System.out.println(" Która metoda jest ukryta/niewidzialna w klasie B?\nmethodThree");
+        System.out.println(" Która metoda przysłania metodę z klasy nadrzędnej/superclass?\n (bez methodOne bo jest to inny typ zmiennej), methodTwo, methodFour");
+        System.out.println(" Która metoda jest ukryta/niewidzialna w klasie B?\nmethodThree i medtodOne jeśli nie można zmeiniać tak typ zmiennej");
 
 
     }
