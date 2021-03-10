@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c97c1205-e3d8-4bb6-bf91-3441ff111d9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Lekcja8/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lekcja9/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Praktyki/Lekcja8/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Praktyki/Lekcja8/main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,13 +44,13 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="copyright" />
   </component>
-  <component name="RunManager" selected="Application.main (4)">
-    <configuration name="main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lekcja4.hmw.main" />
+  <component name="RunManager" selected="Application.main (1)">
+    <configuration name="main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lekcja9.main" />
       <module name="Praktyki" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Lekcja4.hmw.*" />
+          <option name="PATTERN" value="Lekcja9.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -111,11 +112,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.main (4)" />
+        <item itemvalue="Application.main (1)" />
         <item itemvalue="Application.main" />
+        <item itemvalue="Application.main (4)" />
         <item itemvalue="Application.main (3)" />
         <item itemvalue="Application.main (5)" />
-        <item itemvalue="Application.main (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -141,5 +142,29 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Lekcja9/main.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Lekcja9/main.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="x" />
+        <watch expression="array.get(j)" />
+        <watch expression="(array.get(j) == x)" />
+        <watch expression="array.get(j).equals(x)" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
