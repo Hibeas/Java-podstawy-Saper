@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c97c1205-e3d8-4bb6-bf91-3441ff111d9c" name="Default Changelist" comment="" />
+    <list default="true" id="c97c1205-e3d8-4bb6-bf91-3441ff111d9c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Lekcja10/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,13 +43,26 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="copyright" />
   </component>
-  <component name="RunManager" selected="Application.main (1)">
+  <component name="RunManager" selected="Application.main (2)">
     <configuration name="main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Lekcja9.main" />
       <module name="Praktyki" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Lekcja9.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lekcja10.main" />
+      <module name="Praktyki" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lekcja10.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -80,19 +96,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="main (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lekcja5.hmw.main" />
-      <module name="Praktyki" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Lekcja5.hmw.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Lekcja7.main" />
       <module name="Praktyki" />
@@ -108,11 +111,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.main (2)" />
         <item itemvalue="Application.main (1)" />
         <item itemvalue="Application.main" />
         <item itemvalue="Application.main (4)" />
         <item itemvalue="Application.main (3)" />
-        <item itemvalue="Application.main (5)" />
       </list>
     </recent_temporary>
   </component>
@@ -146,6 +149,11 @@
           <url>file://$PROJECT_DIR$/src/Lekcja9/main.java</url>
           <line>50</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Lekcja10/main.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
