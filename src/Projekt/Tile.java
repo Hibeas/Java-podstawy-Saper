@@ -22,7 +22,6 @@ public class Tile {
 
     //ta klasa odpowiada za kafelki
     public void draw(Graphics g){
-        g.setColor(Color.RED);
-        g.fillRect(x*width,y*hight,width,hight);
+        g.drawImage(image, x*width, y*width, null);
     }
 }

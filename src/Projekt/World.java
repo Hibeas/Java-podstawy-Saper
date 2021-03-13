@@ -11,7 +11,7 @@ public class World {
     private Tile[][] tiles;
 
     private BufferedImage bomb = ImageLoader.loadImage("grafika/bomb.png");//w końcu dodawanie tych afelkó
-    private BufferedImage flag = ImageLoader.loadImage("grafika/flag.png");
+    private BufferedImage flag = ImageLoader.loadImage("grafika/flag.png"); 
     private BufferedImage normal = ImageLoader.loadImage("grafika/normal.png");
     private BufferedImage pressed = ImageLoader.loadImage("grafika/pressed.png");
     public World(){
