@@ -19,6 +19,7 @@ public class frame extends JFrame implements MouseListener {//Mouselistenet odpo
 
         setResizable(false);//uniemożliwianie zmieniania wielkości okna (nie można rozszerzać
         setDefaultCloseOperation(EXIT_ON_CLOSE);//zamykanie okna gdy wciśniemy X(u góry okna)
+        addMouseListener(this);
 
         screen = new Screen();//tworzymy obiekt screen
         add(screen);
@@ -40,6 +41,7 @@ public class frame extends JFrame implements MouseListener {//Mouselistenet odpo
 
     @Override
     public void mouseReleased(MouseEvent e) {
+        System.out.println(true);
 
     }
 
