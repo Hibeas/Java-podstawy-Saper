@@ -10,10 +10,10 @@ public class World {
 
     private Tile[][] tiles;
 
-    private BufferedImage bomb = ImageLoader.loadImage("grafika/bomb.png");//w końcu dodawanie tych afelkó
-    private BufferedImage flag = ImageLoader.loadImage("grafika/flag.png"); 
-    private BufferedImage normal = ImageLoader.loadImage("grafika/normal.png");
-    private BufferedImage pressed = ImageLoader.loadImage("grafika/pressed.png");
+    private BufferedImage bomb = ImageLoader.scale(ImageLoader.loadImage("grafika/bomb.png"), Tile.getWidth(), Tile.getHight());//w końcu dodawanie tych afelkó
+    private BufferedImage flag = ImageLoader.scale(ImageLoader.loadImage("grafika/flag.png"), Tile.getWidth(), Tile.getHight());
+    private BufferedImage normal = ImageLoader.scale(ImageLoader.loadImage("grafika/normal.png"), Tile.getWidth(), Tile.getHight());
+    private BufferedImage pressed = ImageLoader.scale(ImageLoader.loadImage("grafika/pressed.png"), Tile.getWidth(), Tile.getHight());
     public World(){
         tiles = new Tile[width][hight];//tworzenie kafelka
 

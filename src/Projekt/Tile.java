@@ -24,4 +24,12 @@ public class Tile {
     public void draw(Graphics g){
         g.drawImage(image, x*width, y*width, null);
     }
+
+    public static int getWidth() {
+        return width;
+    }
+
+    public static int getHight() {
+        return hight;
+    }
 }
