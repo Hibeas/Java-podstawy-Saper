@@ -41,7 +41,8 @@ public class frame extends JFrame implements MouseListener {//Mouselistenet odpo
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        System.out.println(true);
+        //System.out.println(true); - dzięki takim rzeczom sprawdzałem czy dana część programu działą oraz czy klasy i funkcje współpracują ze saobą
+        screen.repaint();
 
     }
 
