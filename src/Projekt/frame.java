@@ -13,6 +13,8 @@ public class frame extends JFrame implements MouseListener {//Mouselistenet odpo
     private Screen screen;
     private World world;
     private Font font;
+    private int insetLeft;
+    private int insetTop;
 
     public frame(){
         super("Saper");//tytuł okna które tworzymy
@@ -25,7 +27,9 @@ public class frame extends JFrame implements MouseListener {//Mouselistenet odpo
         screen = new Screen();//tworzymy obiekt screen
         add(screen);
         pack();
-        setSize(width+getInsets().left + getInsets().right, hight+getInsets().bottom + getInsets().top);//tutaj ustawiamy rozmiar 400 + rozmiar obramowania, co stworzymy nam okno o rozmiarach 400x400, a nie 396x375
+        insetLeft = getInsets().left;
+        insetTop = getInsets().top;
+        setSize(width+insetLeft + getInsets().right, hight+getInsets().bottom + insetTop);//tutaj ustawiamy rozmiar 400 + rozmiar obramowania, co stworzymy nam okno o rozmiarach 400x400, a nie 396x375
         setLocationRelativeTo(null);//okno będzie wyświetlana pośrodku
         setVisible(true);//wyświetla ramka
 
@@ -44,8 +48,9 @@ public class frame extends JFrame implements MouseListener {//Mouselistenet odpo
 
     @Override
     public void mouseReleased(MouseEvent e) {
+
         //System.out.println(true); - dzięki takim rzeczom sprawdzałem czy dana część programu działą oraz czy klasy i funkcje współpracują ze saobą
-        world.clicked(e.getX(),e.getY());
+        world.clicked(e.getX()-insetLeft,e.getY()-insetTop );
         screen.repaint();
 
     }

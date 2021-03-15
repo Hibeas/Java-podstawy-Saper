@@ -71,6 +71,7 @@ public class World {
         }
     }
     public void clicked(int x, int y){
+        System.out.println(x + ";");
         int tileX = x/width;
         int tileY = y/hight;
 
