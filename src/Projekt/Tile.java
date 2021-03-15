@@ -26,7 +26,6 @@ public class Tile {
         this.openedImage = openedImage;
         this.flag = flag;
 
-        opened = true;
     }
 
     public void setNormal(BufferedImage normal) {
@@ -65,8 +64,9 @@ public class Tile {
             if(bomb)g.drawImage(bombImage, x*width, y*width, null);
             else {
                 g.drawImage(openedImage, x*width, y*width, null);
-                if(amoundOFnearBombs > 0){
-                    g.drawString(""+amoundOFnearBombs, x*width,y*hight + hight);
+                if(amoundOFnearBombs > 0){//czcionka
+                    g.setColor(Color.WHITE);
+                    g.drawString(""+amoundOFnearBombs, x*width+7,y*hight + hight-4);
                 }
             }
         }

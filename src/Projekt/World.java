@@ -70,6 +70,13 @@ public class World {
             }
         }
     }
+    public void clicked(int x, int y){
+        int tileX = x/width;
+        int tileY = y/hight;
+
+        tiles[tileX][tileY].setOpened(true);
+
+    }
     public void draw(Graphics g){
         for(int x=0;x<width;x++) {
             for (int y = 0; y < hight; y++) {

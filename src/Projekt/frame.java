@@ -29,7 +29,7 @@ public class frame extends JFrame implements MouseListener {//Mouselistenet odpo
         setLocationRelativeTo(null);//okno będzie wyświetlana pośrodku
         setVisible(true);//wyświetla ramka
 
-        font = new Font("SansSerif",0,10);//wyglą czcionki
+        font = new Font("SansSerif",0,12);//wyglą czcionki
     }
     //początek zaimplementowanyhc metod Mouse
     @Override
@@ -45,6 +45,7 @@ public class frame extends JFrame implements MouseListener {//Mouselistenet odpo
     @Override
     public void mouseReleased(MouseEvent e) {
         //System.out.println(true); - dzięki takim rzeczom sprawdzałem czy dana część programu działą oraz czy klasy i funkcje współpracują ze saobą
+        world.clicked(e.getX(),e.getY());
         screen.repaint();
 
     }
