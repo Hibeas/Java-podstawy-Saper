@@ -33,6 +33,7 @@ public class World {
     private void placeBombs(){
         for (int i=0;i<AMOUNT_OF_BOMBS;i++){
             placBomb();
+            setNumbers();
         }
     }
     private void placBomb(){
@@ -43,6 +44,31 @@ public class World {
             tiles[x][y].setBomb(true);
         }
         else placBomb();
+    }
+    private void setNumbers(){//usytawioa cyfry
+        for (int x = 0; x < width; x++) {
+            for (int y = 0; y < hight; y++) {
+                int mx = x-1;
+                int gx = x+1;
+                int my = y-1;
+                int gy = y+1;
+
+                int amountOFBombs = 0;
+                if(mx >= 0&&my>=0&&tiles[mx][my].isBomb())amountOFBombs++;//musimy to napisać 8 razy (8 to maskymnalna liczba jaka może być w saperze gdyż tyle pol obejmuje jedno pole)
+                if(mx >= 0&&tiles[mx][y].isBomb())amountOFBombs++;//sprawdzamy wszędzie czy sa bomby 9dookoła pole)
+                if(mx >= 0&&gy<hight&&tiles[mx][gy].isBomb())amountOFBombs++;
+
+                if(my>=0&&tiles[x][my].isBomb())amountOFBombs++;
+                if(gy<hight&&tiles[x][gy].isBomb())amountOFBombs++;
+
+                if(gx < width&&my>=0&&tiles[gx][my].isBomb())amountOFBombs++;
+                if(gx < width&&tiles[gx][y].isBomb())amountOFBombs++;
+                if(gx < width&&gy<hight&&tiles[gx][gy].isBomb())amountOFBombs++;
+
+                tiles[x][y].setAmoundOFnearBombs(amountOFBombs);
+
+            }
+        }
     }
     public void draw(Graphics g){
         for(int x=0;x<width;x++) {

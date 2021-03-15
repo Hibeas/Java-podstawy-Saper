@@ -12,6 +12,7 @@ public class frame extends JFrame implements MouseListener {//Mouselistenet odpo
     private static int hight = 400;//parametry okna - wysokość
     private Screen screen;
     private World world;
+    private Font font;
 
     public frame(){
         super("Saper");//tytuł okna które tworzymy
@@ -27,6 +28,8 @@ public class frame extends JFrame implements MouseListener {//Mouselistenet odpo
         setSize(width+getInsets().left + getInsets().right, hight+getInsets().bottom + getInsets().top);//tutaj ustawiamy rozmiar 400 + rozmiar obramowania, co stworzymy nam okno o rozmiarach 400x400, a nie 396x375
         setLocationRelativeTo(null);//okno będzie wyświetlana pośrodku
         setVisible(true);//wyświetla ramka
+
+        font = new Font("SansSerif",0,10);//wyglą czcionki
     }
     //początek zaimplementowanyhc metod Mouse
     @Override
@@ -60,6 +63,7 @@ public class frame extends JFrame implements MouseListener {//Mouselistenet odpo
     public class Screen extends JPanel{
         @Override
         public void paintComponent(Graphics g){//tutaj nadpisujemy już funkcje zawartę w JPanelu umożliwiająca nam rysowanie obiektów w aplika cji okiendkowej
+            g.setFont(font);
             world.draw(g);
         }
     }

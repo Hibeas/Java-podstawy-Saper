@@ -65,6 +65,9 @@ public class Tile {
             if(bomb)g.drawImage(bombImage, x*width, y*width, null);
             else {
                 g.drawImage(openedImage, x*width, y*width, null);
+                if(amoundOFnearBombs > 0){
+                    g.drawString(""+amoundOFnearBombs, x*width,y*hight + hight);
+                }
             }
         }
     }
