@@ -9,7 +9,10 @@ public class World {
     private static int width = 20;//tutaj możemy zmieniąc wielkość, a dzięki temu zarazem ilość kafelków
     private static int hight = 20;
 
-    private final int AMOUNT_OF_BOMBS = 20;//tutaj ustawiamy ilość bomb
+    private final int AMOUNT_OF_BOMBS = 2;//tutaj ustawiamy ilość bomb
+
+    private boolean finisch;
+    private boolean dead;
     private Random random;
 
     private Tile[][] tiles;
@@ -70,18 +73,68 @@ public class World {
             }
         }
     }
-    public void clicked(int x, int y){
+    public void clickedLeft(int x, int y){
         int tileX = x/width;
         int tileY = y/hight;
-
-        tiles[tileX][tileY].setOpened(true);
-
+        if(!tiles[tileX][tileY].isFlag()) {
+            tiles[tileX][tileY].setOpened(true);
+            if (tiles[tileX][tileY].isBomb()) {//do przegrania
+                dead = true;
+            } else if (tiles[tileX][tileY].getAmoundOFnearBombs() == 0) {//kiedy okryjesz wy=zytkie bomby
+                open(tileX, tileY);
+            }
+            checkFinisch();
+        }
     }
+    public void clickedRight(int x, int y){
+        int tileX = x/width;
+        int tileY = y/hight;
+        tiles[tileX][tileY].placeFlag();
+        checkFinisch();
+    }
+    private void open(int x, int y){
+        tiles[x][y].setOpened(true);
+        if(tiles[x][y].getAmoundOFnearBombs()==0) {
+            int mx = x - 1;
+            int gx = x + 1;
+            int my = y - 1;
+            int gy = y + 1;
+
+            if (mx >= 0 && tiles[mx][y].canOpen()) open(mx, y);//do poprawy //gdy klikamy w wolne pole okryają się inne też
+            if (gx < width && tiles[gx][y].canOpen()) open(gx, y);
+            if (my >= 0 && tiles[x][my].canOpen()) open(x, my);
+            if (gy < hight && tiles[x][gy].canOpen()) open(x, gy);
+        }
+    }
+    private void checkFinisch()
+    {
+        finisch = true;
+        outer : for(int x = 0;x < width;x++)
+        {
+            for(int y = 0;y < hight;y++)
+            {
+                if(!(tiles[x] [y].isOpened()||(tiles[x] [y].isBomb()&&tiles[x] [y].isFlag())))
+                {
+                    finisch = false;
+                    break outer;
+                }
+            }
+        }
+    }
+
     public void draw(Graphics g){
         for(int x=0;x<width;x++) {
             for (int y = 0; y < hight; y++) {
                 tiles[x][y].draw(g);//tutaj rysujemy kafelek
             }
+        }
+        if(dead){
+            g.setColor(Color.RED);
+            g.drawString("YOU LOSE", 20, 20);
+        }
+         else if(finisch){
+            g.setColor(Color.RED);
+            g.drawString("YOU WON", 10,10);
         }
     }
 

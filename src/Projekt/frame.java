@@ -49,8 +49,9 @@ public class frame extends JFrame implements MouseListener {//Mouselistenet odpo
     @Override
     public void mouseReleased(MouseEvent e) {
 
-        //System.out.println(true); - dzięki takim rzeczom sprawdzałem czy dana część programu działą oraz czy klasy i funkcje współpracują ze saobą
-        world.clicked(e.getX()-insetLeft,e.getY()-insetTop );
+        //System.out.println(true); - dzięki takim rzeczom sprawdzałem czy dana część programu działą oraz czy klasy i funkcje współpracują ze saobą//lewy = 1, prawy =3
+        if(e.getButton()==1)world.clickedLeft(e.getX()-insetLeft,e.getY()-insetTop );
+        if(e.getButton()==3)world.clickedRight(e.getX()-insetLeft,e.getY()-insetTop );
         screen.repaint();
 
     }
