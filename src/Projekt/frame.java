@@ -2,11 +2,14 @@ package Projekt;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.Scanner;
 
 //Tutaj będzie tworzone okno w którym będzie wyświetlany saper
-public class frame extends JFrame implements MouseListener {//Mouselistenet odpowiada za pilnowanie myszki
+public class frame extends JFrame implements MouseListener, KeyListener {//Mouselistenet odpowiada za pilnowanie myszki
 
     private static int width = 400;//parametry okna - długość
     private static int hight = 400;//parametry okna - wysokość
@@ -23,6 +26,7 @@ public class frame extends JFrame implements MouseListener {//Mouselistenet odpo
         setResizable(false);//uniemożliwianie zmieniania wielkości okna (nie można rozszerzać
         setDefaultCloseOperation(EXIT_ON_CLOSE);//zamykanie okna gdy wciśniemy X(u góry okna)
         addMouseListener(this);
+        addKeyListener(this);
 
         screen = new Screen();//tworzymy obiekt screen
         add(screen);
@@ -33,7 +37,7 @@ public class frame extends JFrame implements MouseListener {//Mouselistenet odpo
         setLocationRelativeTo(null);//okno będzie wyświetlana pośrodku
         setVisible(true);//wyświetla ramka
 
-        font = new Font("SansSerif",0,12);//wyglą czcionki
+        font = new Font("SansSerifBold",0,12);//wyglą czcionki
     }
     //początek zaimplementowanyhc metod Mouse
     @Override
@@ -55,7 +59,23 @@ public class frame extends JFrame implements MouseListener {//Mouselistenet odpo
         screen.repaint();
 
     }
+    @Override
+    public void keyTyped(KeyEvent e) {
 
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        if(e.getKeyCode()==KeyEvent.VK_R){
+            world.reset();
+            screen.repaint();
+        }
+    }
     @Override
     public void mouseEntered(MouseEvent e) {
 
@@ -65,6 +85,10 @@ public class frame extends JFrame implements MouseListener {//Mouselistenet odpo
     public void mouseExited(MouseEvent e) {
 
     }
+
+
+
+
     //koniec zaimplementowanych metod mause
 
     public class Screen extends JPanel{

@@ -5,11 +5,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Praktyki/Projekt/frame$screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Praktyki/Projekt/frame$screen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Praktyki/Projekt/frame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Praktyki/Projekt/frame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Praktyki/Projekt/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Praktyki/Projekt/main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Praktyki/Projekt/tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Praktyki/Projekt/tile.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Praktyki/Projekt/world.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Praktyki/Projekt/world.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projekt/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projekt/Tile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projekt/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projekt/World.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projekt/frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projekt/frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projekt/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projekt/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

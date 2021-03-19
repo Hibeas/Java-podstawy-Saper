@@ -3,14 +3,15 @@ package Projekt;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.Random;
+import java.util.Scanner;
 
 public class World {
     //"swiat" sapera
     private static int width = 20;//tutaj możemy zmieniąc wielkość, a dzięki temu zarazem ilość kafelków
     private static int hight = 20;
 
-    private final int AMOUNT_OF_BOMBS = 2;//tutaj ustawiamy ilość bomb
-
+    private final int AMOUNT_OF_BOMBS = 1;//tutaj ustawiamy ilość bomb
+    Scanner scanner = new Scanner(System.in);
     private boolean finisch;
     private boolean dead;
     private Random random;
@@ -31,7 +32,7 @@ public class World {
                 tiles[x][y] = new Tile(x, y, normal, bomb, pressed, flag);
             }
         }
-        placeBombs();
+        reset();
     }
     private void placeBombs(){
         for (int i=0;i<AMOUNT_OF_BOMBS;i++){
@@ -74,23 +75,27 @@ public class World {
         }
     }
     public void clickedLeft(int x, int y){
-        int tileX = x/width;
-        int tileY = y/hight;
-        if(!tiles[tileX][tileY].isFlag()) {
-            tiles[tileX][tileY].setOpened(true);
-            if (tiles[tileX][tileY].isBomb()) {//do przegrania
-                dead = true;
-            } else if (tiles[tileX][tileY].getAmoundOFnearBombs() == 0) {//kiedy okryjesz wy=zytkie bomby
-                open(tileX, tileY);
+        if(!dead&&!finisch) {
+            int tileX = x / width;
+            int tileY = y / hight;
+            if (!tiles[tileX][tileY].isFlag()) {
+                tiles[tileX][tileY].setOpened(true);
+                if (tiles[tileX][tileY].isBomb()) {//do przegrania
+                    dead = true;
+                } else if (tiles[tileX][tileY].getAmoundOFnearBombs() == 0) {//kiedy okryjesz wy=zytkie bomby
+                    open(tileX, tileY);
+                }
+                checkFinisch();
             }
-            checkFinisch();
         }
     }
     public void clickedRight(int x, int y){
-        int tileX = x/width;
-        int tileY = y/hight;
-        tiles[tileX][tileY].placeFlag();
-        checkFinisch();
+        if(!dead&&!finisch) {
+            int tileX = x / width;
+            int tileY = y / hight;
+            tiles[tileX][tileY].placeFlag();
+            checkFinisch();
+        }
     }
     private void open(int x, int y){
         tiles[x][y].setOpened(true);
@@ -100,12 +105,20 @@ public class World {
             int my = y - 1;
             int gy = y + 1;
 
-            if (mx >= 0 && tiles[mx][y].canOpen()) open(mx, y);//do poprawy //gdy klikamy w wolne pole okryają się inne też
-            if (gx < width && tiles[gx][y].canOpen()) open(gx, y);
-            if (my >= 0 && tiles[x][my].canOpen()) open(x, my);
-            if (gy < hight && tiles[x][gy].canOpen()) open(x, gy);
+            if(mx >= 0&&my>=0&&tiles[mx][my].canOpen())open(mx,my);
+            if(mx >= 0&&tiles[mx][y].canOpen())open(mx,y);
+            if(mx >= 0&&gy<hight&&tiles[mx][gy].canOpen())open(mx,gy);
+
+            if(my>=0&&tiles[x][my].canOpen())open(x,my);
+            if(gy<hight&&tiles[x][gy].canOpen())open(x,gy);
+
+            if(gx < width&&my>=0&&tiles[gx][my].canOpen())open(gx,my);
+            if(gx < width&&tiles[gx][y].canOpen())open(gx,y);
+            if(gx < width&&gy<hight&&tiles[gx][gy].canOpen())open(gx,gy);
+
         }
     }
+
     private void checkFinisch()
     {
         finisch = true;
@@ -116,10 +129,23 @@ public class World {
                 if(!(tiles[x] [y].isOpened()||(tiles[x] [y].isBomb()&&tiles[x] [y].isFlag())))
                 {
                     finisch = false;
+                    System.out.println("Podaj swój nick");
+                    System.out.println("Gratualcje"+scanner.nextLine()+",przeszedłeś sapera");
                     break outer;
                 }
             }
         }
+    }
+    public void reset(){
+        for (int x = 0; x < width; x++) {
+            for (int y = 0; y < hight; y++) {
+                tiles[x][y].reset();
+            }
+        }
+        dead = false;
+        finisch = false;
+        placeBombs();
+        setNumbers();
     }
 
     public void draw(Graphics g){
@@ -129,12 +155,12 @@ public class World {
             }
         }
         if(dead){
-            g.setColor(Color.RED);
-            g.drawString("YOU LOSE", 20, 20);
+            g.setColor(Color.BLUE);
+            g.drawString("YOU LOSE", 200, 200);
         }
          else if(finisch){
-            g.setColor(Color.RED);
-            g.drawString("YOU WON", 10,10);
+            g.setColor(Color.BLUE);
+            g.drawString("YOU WON", 200,200);
         }
     }
 

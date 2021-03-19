@@ -71,6 +71,11 @@ public class Tile {
     public boolean isFlag() {
         return flag;
     }
+    public void reset(){
+        flag = false;
+        bomb=false;
+        opened = false;
+    }
     public void draw(Graphics g){
         if(!opened){
             if(!flag)g.drawImage(normal, x*width, y*width, null);
