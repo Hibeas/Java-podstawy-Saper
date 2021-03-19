@@ -6,7 +6,6 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.util.Scanner;
 
 //Tutaj będzie tworzone okno w którym będzie wyświetlany saper
 public class frame extends JFrame implements MouseListener, KeyListener {//Mouselistenet odpowiada za pilnowanie myszki
