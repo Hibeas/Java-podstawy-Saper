@@ -10,7 +10,7 @@ public class World {
     private static int width = 20;//tutaj możemy zmieniąc wielkość, a dzięki temu zarazem ilość kafelków
     private static int hight = 20;
 
-    private final int AMOUNT_OF_BOMBS = 40;//tutaj ustawiamy ilość bomb
+    private final int AMOUNT_OF_BOMBS = 1;//tutaj ustawiamy ilość bomb
     private boolean finisch;
     private boolean dead;
     private Random random;
