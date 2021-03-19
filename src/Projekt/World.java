@@ -10,8 +10,7 @@ public class World {
     private static int width = 20;//tutaj możemy zmieniąc wielkość, a dzięki temu zarazem ilość kafelków
     private static int hight = 20;
 
-    private final int AMOUNT_OF_BOMBS = 1;//tutaj ustawiamy ilość bomb
-    Scanner scanner = new Scanner(System.in);
+    private final int AMOUNT_OF_BOMBS = 40;//tutaj ustawiamy ilość bomb
     private boolean finisch;
     private boolean dead;
     private Random random;
@@ -129,8 +128,6 @@ public class World {
                 if(!(tiles[x] [y].isOpened()||(tiles[x] [y].isBomb()&&tiles[x] [y].isFlag())))
                 {
                     finisch = false;
-                    System.out.println("Podaj swój nick");
-                    System.out.println("Gratualcje"+scanner.nextLine()+",przeszedłeś sapera");
                     break outer;
                 }
             }
